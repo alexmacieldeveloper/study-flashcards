@@ -6,7 +6,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 type Props = {
-  showAnswer: boolean;
+  flipped: boolean;
   onToggleAnswer: () => void;
   onPrev: () => void;
   onNext: () => void;
@@ -14,37 +14,41 @@ type Props = {
 };
 
 export default function FlashcardButtons({
-  showAnswer,
+  flipped,
   onToggleAnswer,
   onPrev,
   onNext,
   disabled,
 }: Props) {
   return (
-    <Box sx={{ mt: 3, display: "flex", justifyContent: "center", gap: 2 }}>
-      <Button
-        variant="contained"
-        onClick={onToggleAnswer}
-        startIcon={showAnswer ? <VisibilityOffIcon /> : <VisibilityIcon />}
-      >
-        {showAnswer ? "Esconder Resposta" : "Mostrar Resposta"}
-      </Button>
-      <Button
-        variant="outlined"
-        onClick={onPrev}
-        disabled={disabled}
-        startIcon={<ArrowBackIcon />}
-      >
-        Anterior
-      </Button>
-      <Button
-        variant="outlined"
-        onClick={onNext}
-        disabled={disabled}
-        endIcon={<ArrowForwardIcon />}
-      >
-        Próxima
-      </Button>
+    <Box sx={{ mt: '5rem', display: "grid", gridTemplateRows: "1fr", gap: 2 }}>
+      <Box sx={{ mb: 2, display: "flex", justifyContent: "center" }}>
+        <Button
+          variant="contained"
+          onClick={onToggleAnswer}
+          startIcon={flipped ? <VisibilityOffIcon /> : <VisibilityIcon />}
+        >
+          {flipped ? "Esconder Resposta" : "Mostrar Resposta"}
+        </Button>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Button
+          variant="outlined"
+          onClick={onPrev}
+          disabled={disabled}
+          startIcon={<ArrowBackIcon />}
+        >
+          Anterior
+        </Button>
+        <Button
+          variant="outlined"
+          onClick={onNext}
+          disabled={disabled}
+          endIcon={<ArrowForwardIcon />}
+        >
+          Próxima
+        </Button>
+      </Box>
     </Box>
   );
 }
