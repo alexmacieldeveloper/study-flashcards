@@ -1,0 +1,138 @@
+[
+  {
+    "id": 1,
+    "category": "technical",
+    "questionPT": "Explique o ciclo de vida de um componente React.",
+    "questionEN": "Explain the lifecycle of a React component.",
+    "answerPT": "Um componente React passa por três fases principais: montagem (mounting), atualização (updating) e desmontagem (unmounting). Na montagem, o componente é criado e inserido no DOM, incluindo métodos como constructor, render e componentDidMount. Na atualização, o componente pode receber novas props ou state, com métodos como shouldComponentUpdate e componentDidUpdate. Na desmontagem, ele é removido do DOM, executando componentWillUnmount.",
+    "answerEN": "A React component goes through three main phases: mounting, updating, and unmounting. During mounting, the component is created and inserted into the DOM, including methods like constructor, render, and componentDidMount. During updating, the component may receive new props or state, triggering methods such as shouldComponentUpdate and componentDidUpdate. During unmounting, the component is removed from the DOM, executing componentWillUnmount."
+  },
+  {
+    "id": 2,
+    "category": "technical",
+    "questionPT": "O que são hooks em React? Cite alguns e explique suas funções.",
+    "questionEN": "What are hooks in React? Name a few and explain their functions.",
+    "answerPT": "Hooks são funções que permitem usar state e outros recursos do React sem escrever classes. Os principais hooks são useState, que gerencia estado local; useEffect, que executa efeitos colaterais; useContext, que acessa contexto; e useRef, que acessa elementos do DOM ou mantém valores mutáveis.",
+    "answerEN": "Hooks are functions that let you use state and other React features without writing classes. The main hooks are useState, which manages local state; useEffect, which runs side effects; useContext, which accesses context; and useRef, which accesses DOM elements or holds mutable values."
+  },
+  {
+    "id": 3,
+    "category": "technical",
+    "questionPT": "Qual a diferença entre state e props em React?",
+    "questionEN": "What is the difference between state and props in React?",
+    "answerPT": "Props são dados passados de um componente pai para um filho e são imutáveis dentro do componente filho. State é um conjunto de dados interno ao componente que pode mudar ao longo do tempo e provoca re-renderizações quando atualizado.",
+    "answerEN": "Props are data passed from a parent component to a child and are immutable inside the child component. State is a set of internal data within the component that can change over time and causes re-renders when updated."
+  },
+  {
+    "id": 4,
+    "category": "technical",
+    "questionPT": "O que é closure em JavaScript?",
+    "questionEN": "What is a closure in JavaScript?",
+    "answerPT": "Closure é a capacidade de uma função lembrar do escopo onde foi criada, mesmo após esse escopo ter sido executado. Isso permite que a função acesse variáveis externas ao seu escopo local.",
+    "answerEN": "A closure is the ability of a function to remember the scope in which it was created, even after that scope has finished executing. This allows the function to access variables outside its local scope."
+  },
+  {
+    "id": 5,
+    "category": "technical",
+    "questionPT": "O que é debounce e para que serve?",
+    "questionEN": "What is debounce and what is it used for?",
+    "answerPT": "Debounce é uma técnica para limitar a frequência com que uma função é executada. É útil para melhorar performance em eventos que disparam muitas vezes, como digitação em campo de busca, executando a função só após o usuário parar de digitar por um tempo.",
+    "answerEN": "Debounce is a technique to limit how often a function is executed. It is useful to improve performance on events that fire frequently, like typing in a search input, by running the function only after the user stops typing for a certain time."
+  },
+  {
+    "id": 6,
+    "category": "technical",
+    "questionPT": "Qual a diferença entre var, let e const em JavaScript?",
+    "questionEN": "What is the difference between var, let, and const in JavaScript?",
+    "answerPT": "Var tem escopo de função e sofre hoisting. Let e const têm escopo de bloco, mas const não permite reatribuição. Let permite reatribuição dentro do bloco. Const deve ser inicializado na declaração e não pode ser reatribuído.",
+    "answerEN": "Var has function scope and is hoisted. Let and const have block scope, but const does not allow reassignment. Let allows reassignment within the block. Const must be initialized at declaration and cannot be reassigned."
+  },
+  {
+    "id": 7,
+    "category": "technical",
+    "questionPT": "O que é hoisting em JavaScript?",
+    "questionEN": "What is hoisting in JavaScript?",
+    "answerPT": "Hoisting é o comportamento do JavaScript de mover declarações de variáveis e funções para o topo do seu escopo antes da execução do código, permitindo usar variáveis e funções antes de serem declaradas no código.",
+    "answerEN": "Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their scope before code execution, allowing variables and functions to be used before they are declared in the code."
+  },
+  {
+    "id": 8,
+    "category": "technical",
+    "questionPT": "Explique o que é o event loop em JavaScript.",
+    "questionEN": "Explain what the event loop is in JavaScript.",
+    "answerPT": "O event loop é o mecanismo que permite que JavaScript seja assíncrono e execute operações não bloqueantes. Ele gerencia a fila de eventos e executa callbacks quando a pilha de chamadas está vazia, permitindo que tarefas sejam processadas após operações assíncronas.",
+    "answerEN": "The event loop is the mechanism that allows JavaScript to be asynchronous and perform non-blocking operations. It manages the event queue and executes callbacks when the call stack is empty, allowing tasks to be processed after asynchronous operations."
+  },
+  {
+    "id": 9,
+    "category": "technical",
+    "questionPT": "Qual a diferença entre componentes controlados e não controlados em React?",
+    "questionEN": "What is the difference between controlled and uncontrolled components in React?",
+    "answerPT": "Componentes controlados têm seu estado gerenciado pelo React via state, com mudanças de valor controladas por eventos onChange. Componentes não controlados gerenciam seu próprio estado internamente, acessível via refs.",
+    "answerEN": "Controlled components have their state managed by React via state, with value changes handled by onChange events. Uncontrolled components manage their own internal state, accessible via refs."
+  },
+  {
+    "id": 10,
+    "category": "technical",
+    "questionPT": "O que é a Context API em React e quando usá-la?",
+    "questionEN": "What is the Context API in React and when should you use it?",
+    "answerPT": "Context API é um recurso do React que permite compartilhar dados entre componentes sem precisar passar props manualmente em todos os níveis. É útil para temas, usuários autenticados ou configurações globais.",
+    "answerEN": "The Context API is a React feature that allows sharing data between components without passing props manually at every level. It’s useful for themes, authenticated users, or global settings."
+  },
+  {
+    "id": 11,
+    "category": "behavioral",
+    "questionPT": "Fale sobre você.",
+    "questionEN": "Tell me about yourself.",
+    "answerPT": "Sou um desenvolvedor front-end com mais de 6 anos de experiência em criação de aplicações web escaláveis e acessíveis, utilizando principalmente React e Next.js com TypeScript. Tenho foco em entregar código limpo, otimizado para SEO e com design responsivo. Atualmente, estou finalizando minha graduação em Análise e Desenvolvimento de Sistemas e busco sempre aprender novas tecnologias e boas práticas.",
+    "answerEN": "I am a front-end developer with over 6 years of experience building scalable and accessible web applications, mainly using React and Next.js with TypeScript. I focus on delivering clean code, optimized for SEO, and responsive design. Currently, I am finishing my degree in Systems Analysis and Development and always seek to learn new technologies and best practices."
+  },
+  {
+    "id": 12,
+    "category": "behavioral",
+    "questionPT": "Descreva um desafio que você enfrentou no trabalho e como resolveu.",
+    "questionEN": "Describe a challenge you faced at work and how you solved it.",
+    "answerPT": "No Grupo Fleury, tivemos que lançar o MVP do sommosdna.com.br em apenas um mês. Organizei meu trabalho criando componentes reutilizáveis e colaborei intensamente com a equipe usando metodologias ágeis, o que nos permitiu cumprir o prazo com qualidade.",
+    "answerEN": "At Grupo Fleury, we had to launch the MVP for sommosdna.com.br in just one month. I organized my work by building reusable components and collaborated closely with the team using Agile methodologies, which allowed us to meet the deadline with quality."
+  },
+  {
+    "id": 13,
+    "category": "behavioral",
+    "questionPT": "Como você lida com prazos apertados?",
+    "questionEN": "How do you handle tight deadlines?",
+    "answerPT": "Eu priorizo tarefas, mantenho comunicação constante com a equipe e foco em entregar funcionalidades essenciais primeiro. Também evito distrações e uso metodologias ágeis para garantir progresso contínuo e ajustes rápidos quando necessário.",
+    "answerEN": "I prioritize tasks, maintain constant communication with the team, and focus on delivering essential features first. I also avoid distractions and use Agile methodologies to ensure continuous progress and quick adjustments when needed."
+  },
+  {
+    "id": 14,
+    "category": "behavioral",
+    "questionPT": "Por que você quer trabalhar no exterior?",
+    "questionEN": "Why do you want to work abroad?",
+    "answerPT": "Quero expandir minha experiência profissional, conhecer novas culturas e trabalhar em equipes diversas. Acredito que isso me ajudará a crescer tecnicamente e pessoalmente, além de contribuir com minhas habilidades para projetos globais.",
+    "answerEN": "I want to expand my professional experience, learn about new cultures, and work in diverse teams. I believe this will help me grow technically and personally, as well as contribute my skills to global projects."
+  },
+  {
+    "id": 15,
+    "category": "behavioral",
+    "questionPT": "Como você se mantém atualizado com novas tecnologias?",
+    "questionEN": "How do you keep yourself updated with new technologies?",
+    "answerPT": "Leio blogs, assisto vídeos, participo de cursos online e faço parte de comunidades de desenvolvedores. Também gosto de praticar projetos pessoais para aplicar o que aprendo.",
+    "answerEN": "I read blogs, watch videos, take online courses, and participate in developer communities. I also enjoy working on personal projects to apply what I learn."
+  },
+  {
+    "id": 16,
+    "category": "behavioral",
+    "questionPT": "Como você trabalha em equipe?",
+    "questionEN": "How do you work in a team?",
+    "answerPT": "Valorizo a comunicação clara e aberta, colaboração e respeito às opiniões dos outros. Gosto de ajudar meus colegas e aprender com eles, buscando sempre o melhor resultado para o projeto.",
+    "answerEN": "I value clear and open communication, collaboration, and respect for others' opinions. I like helping my teammates and learning from them, always aiming for the best outcome for the project."
+  },
+  {
+    "id": 17,
+    "category": "behavioral",
+    "questionPT": "Dê um exemplo de um feedback construtivo que você recebeu.",
+    "questionEN": "Give an example of constructive feedback you received.",
+    "answerPT": "Recebi feedback sobre a importância de escrever testes unitários mais completos. Desde então, tenho dedicado mais atenção a isso, o que melhorou a qualidade e a confiabilidade do código que entrego.",
+    "answerEN": "I received feedback on the importance of writing more comprehensive unit tests. Since then, I have focused more on this, which has improved the quality and reliability of the code I deliver."
+  }
+]
