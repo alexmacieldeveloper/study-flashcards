@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Box } from "@mui/material";
 import questionsData from "./data/questions.json";
 import QuestionCard from "./components/QuestionCard";
 import CategorySelector from "./components/CategorySelector";
@@ -10,7 +10,7 @@ type Category = "technical" | "behavioral";
 export default function App() {
   const [category, setCategory] = useState<Category>("technical");
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showAnswer, setShowAnswer] = useState(false);
+  const [flipped, setFlipped] = useState(false);
 
   const filteredQuestions = questionsData.filter((q) => q.category === category);
   const currentQuestion = filteredQuestions[currentIndex];
@@ -18,22 +18,26 @@ export default function App() {
   function handleCategoryChange(newCategory: string) {
     setCategory(newCategory as Category);
     setCurrentIndex(0);
-    setShowAnswer(false);
+    setFlipped(false);
   }
 
   function goNext() {
-    setShowAnswer(false);
     setCurrentIndex((prev) => (prev + 1) % filteredQuestions.length);
+    setFlipped(false);
   }
 
   function goPrev() {
-    setShowAnswer(false);
     setCurrentIndex((prev) => (prev - 1 + filteredQuestions.length) % filteredQuestions.length);
+    setFlipped(false);
+  }
+
+  function toggleFlip() {
+    setFlipped((prev) => !prev);
   }
 
   return (
-    <Container maxWidth="sm" sx={{ mt: 4, fontFamily: "Roboto, sans-serif" }}>
-      <Typography variant="h4" gutterBottom>
+    <Container maxWidth="lg" sx={{ mt: 6, fontFamily: "Roboto, sans-serif" }}>
+      <Typography variant="h4" gutterBottom textAlign="center" fontWeight="bold">
         Flashcard de Entrevista
       </Typography>
 
@@ -41,22 +45,32 @@ export default function App() {
 
       {filteredQuestions.length > 0 ? (
         <>
-          <Typography variant="subtitle1" gutterBottom>
+          <Typography variant="subtitle1" gutterBottom textAlign="center">
             Pergunta {currentIndex + 1} de {filteredQuestions.length}
           </Typography>
 
-          <QuestionCard question={currentQuestion} showAnswer={showAnswer} />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mt: 2,
+              mb: 3,
+              perspective: 1200,
+            }}
+          >
+            <QuestionCard question={currentQuestion} flipped={flipped} onFlip={toggleFlip} />
+          </Box>
 
           <FlashcardButtons
-            showAnswer={showAnswer}
-            onToggleAnswer={() => setShowAnswer((prev) => !prev)}
+            flipped={flipped}
+            onToggleAnswer={toggleFlip}
             onPrev={goPrev}
             onNext={goNext}
             disabled={filteredQuestions.length <= 1}
           />
         </>
       ) : (
-        <Typography>Nenhuma pergunta disponível nesta categoria.</Typography>
+        <Typography textAlign="center">Nenhuma pergunta disponível nesta categoria.</Typography>
       )}
     </Container>
   );
