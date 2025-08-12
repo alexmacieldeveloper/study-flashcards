@@ -90,7 +90,7 @@ export default function QuestionCard({ question, flipped, onFlip }: Props) {
           transform: "rotateY(180deg)",
         }}
       >
-        <Typography variant="h6" gutterBottom fontWeight="bold">
+        <Typography variant="h6" gutterBottom fontWeight="bold" sx={{ mt: 14 } }>
           Resposta (PT):
         </Typography>
         <Typography paragraph sx={{ whiteSpace: "pre-wrap" }}>
