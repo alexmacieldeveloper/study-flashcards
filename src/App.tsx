@@ -36,7 +36,7 @@ export default function App() {
   }
 
   return (
-    <Container maxWidth="lg" sx={{ mt: 6, fontFamily: "Roboto, sans-serif" }}>
+    <Container maxWidth="lg" sx={{ mt: 4, fontFamily: "Roboto, sans-serif" }}>
       <Typography variant="h4" gutterBottom textAlign="center" fontWeight="bold">
         Flashcard de Entrevista
       </Typography>
@@ -62,8 +62,6 @@ export default function App() {
           </Box>
 
           <FlashcardButtons
-            flipped={flipped}
-            onToggleAnswer={toggleFlip}
             onPrev={goPrev}
             onNext={goNext}
             disabled={filteredQuestions.length <= 1}
